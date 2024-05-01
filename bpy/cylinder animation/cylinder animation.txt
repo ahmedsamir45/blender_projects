@@ -1,0 +1,21 @@
+import bpy
+bpy.ops.mesh.primitive_cylinder_add()
+clyinder1 = bpy.context.active_object
+
+clyinder1.location=(5,5,5)
+start = 1
+clyinder1.keyframe_insert("location",frame=start)
+
+clyinder1.location.x = -5
+clyinder1.location.y = -5
+clyinder1.location.z = -5
+
+middle = 120
+clyinder1.keyframe_insert("location",frame=middle)
+
+clyinder1.location.x = 5
+clyinder1.location.y = 5
+clyinder1.location.z = 5
+
+final = 250
+clyinder1.keyframe_insert("location",frame=final)
